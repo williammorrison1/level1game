@@ -5,6 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    
+    
         <style>
           nav a {
     color: rgb(98, 14, 138);
@@ -21,20 +23,18 @@ nav a:hover {
     border-radius: 20px;
 }
 nav {
-    background-image: linear-gradient(to right, rgb(139, 18, 219),rgb(184, 31, 245));
+    background-image: linear-gradient(to right, rgb(139, 18, 219),rgb(255, 255, 255));
     text-align: center;
     margin: 5vh 1px;
    padding: 5px 5px;
 }
 
           
-          #gameArea {
-            border: 4px solid rgb(216, 6, 6);
-          }
+    
            
           body {
             height: auto;
-            background-image: url('ultraballin4.jpg');
+            background-image: url('ultraballin4.png');
             background-repeat:no-repeat ;
             background-size: cover;
             background-attachment: fixed;
@@ -53,8 +53,15 @@ nav {
     margin: 10px 5%;
     font-family: 'blackopps', cursive;  
 }
-         
-          
+p {
+            font-size: 18px;
+           color: rgb(255, 255, 255);
+           font-size:20px ;
+}
+
+h1{
+  color:rgb(255, 255, 255);
+}
         </style>
   </head>
   <body>
@@ -66,7 +73,9 @@ nav {
     <h1>ULTRA BALLING</h1>
   </nav>
   <section>
-  
+    <br>
+    <p>this site contains three seperate games, those include ponng, snake and flapy bird,</p>
+    <p>each of these haave a unique presnetation</p>
     <canvas id="gameArea" width="800" height="600"></canvas>
     <script src="index.js"></script>
   </body>

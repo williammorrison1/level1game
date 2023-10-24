@@ -72,6 +72,25 @@ div.transbox {
   </head>
   
   <body>
+    <script>
+    // Ask the user for their username using the prompt function
+    const username = prompt("Please enter your username:");
+  
+   
+  
+    // Check if the user entered a username
+    if (username !== null) {
+      alert("Welcome, " + username + "!");
+    } else {
+      // Handle the case where the user cancels the prompt
+      alert("You didn't enter a username. Default name will be used.");
+      username = "DefaultUser";
+    }
+  
+   
+  
+    // Now you can use the 'username' variable in your game.
+  </script>
    <nav>
     <a href="game.html">ultra flying</a>
     <a href="game2.html">balling snake</a>

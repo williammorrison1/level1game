@@ -69,7 +69,7 @@ color: rgb(221, 200, 13);
         var myGamePiece;
         var myObstacles = [];
         var myScore;
-
+//game start//
         function startGame() {
             myGamePiece = new component(30, 30, "red", 10, 120);
             myGamePiece.gravity = 0.05;
@@ -91,7 +91,7 @@ color: rgb(221, 200, 13);
                 this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
             }
         }
-
+//game dimetions//
         function component(width, height, color, x, y, type) {
             this.type = type;
             this.score = 0;
@@ -113,6 +113,7 @@ color: rgb(221, 200, 13);
                     ctx.fillStyle = color;
                     ctx.fillRect(this.x, this.y, this.width, this.height);
                 }
+                //movement speed//
             }
             this.newPos = function () {
                 this.gravitySpeed += this.gravity;
@@ -126,6 +127,7 @@ color: rgb(221, 200, 13);
                     this.y = rockbottom;
                     this.gravitySpeed = 0;
                 }
+                //ball movement//
             }
             this.crashWith = function (otherobj) {
                 var myleft = this.x;
@@ -142,6 +144,7 @@ color: rgb(221, 200, 13);
                 }
                 return crash;
             }
+            //colltion//
         }
 
         function updateGameArea() {
@@ -168,6 +171,7 @@ color: rgb(221, 200, 13);
                 myObstacles[i].x += -1;
                 myObstacles[i].update();
             }
+            //score//
             myScore.text = "SCORE: " + myGameArea.frameNo;
             myScore.update();
             myGamePiece.newPos();
@@ -178,7 +182,7 @@ color: rgb(221, 200, 13);
             if ((myGameArea.frameNo / n) % 1 == 0) { return true; }
             return false;
         }
-
+//accelration//
         function accelerate(n) {
             myGamePiece.gravity = n;
         }
